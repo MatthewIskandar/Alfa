@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="bg-3">
                     <div class="image-element" data-anim="slide-right">
-                        <img src="./assets/images/bg-2-1.png" alt="bg-2-1" class="img-fluid">
+                        <img src="./assets/images/bg-2.png" alt="bg-2-1" class="img-fluid">
                     </div>
                 </div>
                 <div class="bg-2">
@@ -287,7 +287,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="reminder-wrap">
                     <div class="image-wrapper">
                         <div class="image-element">
-                            <img src="./assets/images/background-1.webp" alt="couple-background">
+                        <img 
+                            src="./assets/images/background-1.webp" 
+                            alt="couple-background"
+                            style="
+                              width:100%;
+                              height:100%;
+                              object-fit:cover;
+                              object-position:center 75%; /* center vertically */">
                         </div>
                     </div>
                     <div class="reminder-content">
@@ -832,10 +839,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 <label for="confirmation" class="form-label">Confirmation of Attendance</label>
                                             <select id="confirmation" name="confirmation" class="form-select" required>
                                               <option disabled selected value="">Select event to attend</option>
-                                              <option value="All">Attend all</option>
+                                              <option value="Holy Matrimony">Attend all</option>
                                               <option value="Holy Matrimony">Attend Holy Matrimony only</option>
                                               <option value="Wedding Reception">Attend Wedding Reception only</option>
-                                              <option value="Afterparty">Attend Afterparty only</option>
+                                              <option value="Wedding Reception">Attend Afterparty only</option>
                                               <option value="Unable All">Unable to attend</option>
                                             </select>
 
