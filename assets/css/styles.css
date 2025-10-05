@@ -2232,7 +2232,36 @@ img[alt=tree] {
      object-fit: cover;
   border-radius: var(--border-radius);
 }
+.story-section img {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
+.story-section h6 {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.story-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.three-photo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+  max-width: 120%;
+}
+
+.three-photo-row img {
+  width: 33.3333%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
 .venue-section {
   position: relative;
   padding: 5rem 0;
