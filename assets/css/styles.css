@@ -3618,3 +3618,67 @@ img[alt=tree] {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+.bank-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.bank-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.6);
+  padding: 14px 18px;
+  border-radius: 10px;
+  max-width: 520px;
+  width: 100%;
+  justify-content: flex-start;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+.bank-logo {
+  width: 46px;
+  height: auto;
+  object-fit: contain;
+  flex: 0 0 46px;
+}
+
+.bank-info {
+  flex: 1;
+  text-align: left;
+}
+
+.bank-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.bank-account {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+  user-select: all;
+  display: inline-block;
+  padding: 4px 0;
+}
+
+.bank-account:hover {
+  text-decoration: underline;
+}
+
+.bank-holder {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 2px;
+}
+
+
