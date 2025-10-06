@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="bg-3">
                     <div class="image-element" data-anim="slide-right">
-                        <img src="./assets/images/bg-2-1.png" alt="bg-2-1" class="img-fluid">
+                        <img src="./assets/images/bg-2.png" alt="bg-2-1" class="img-fluid">
                     </div>
                 </div>
                 <div class="bg-2">
@@ -287,7 +287,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="reminder-wrap">
                     <div class="image-wrapper">
                         <div class="image-element">
-                            <img src="./assets/images/background-1.webp" alt="couple-background">
+                        <img 
+                            src="./assets/images/background-1.webp" 
+                            alt="couple-background"
+                            style="
+                              width:100%;
+                              height:100%;
+                              object-fit:cover;
+                              object-position:center 75%; /* center vertically */">
                         </div>
                     </div>
                     <div class="reminder-content">
@@ -486,7 +493,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <div class="position-relative" data-anim="zoom-out" style="text-align: justify;">
                                                 <p>God’s timing is always perfect. He brought us together not by chance, but by His plan. From friendship to love, from love to a lifelong promise.</p>
                                                 <br>
-                                                <p>At Disney Sea Japan, amidst the magic and joy, we marked the beginning of our journey together.We are grateful to step into this covenant of marriage with Him at the center.</p>
+                                                <p>At Disney Sea Japan, amidst the magic and joy, we marked the beginning of our journey together. We are grateful to step into this covenant of marriage with Him at the center.</p>
                                                 <br>
                                                 <p>"Two are better than one, for they have a good return for their labor."</p>
                                                 <br>
@@ -543,7 +550,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <h2>Event & Venue</h2>
                                         </div>
                                         <div class="position-relative" data-anim="zoom-out">
-                                            <p>We would love to celebrate with you! Please let us know by filling out the form below</p>
+                                            <p>We would love to celebrate with you!</p>
+                                            <p>Please let us know by filling out the form below</p>
                                         </div>
                                     </div>
                                 </div>
@@ -832,10 +840,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 <label for="confirmation" class="form-label">Confirmation of Attendance</label>
                                             <select id="confirmation" name="confirmation" class="form-select" required>
                                               <option disabled selected value="">Select event to attend</option>
-                                              <option value="All">Attend all</option>
+                                              <option value="Holy Matrimony">Attend all</option>
                                               <option value="Holy Matrimony">Attend Holy Matrimony only</option>
                                               <option value="Wedding Reception">Attend Wedding Reception only</option>
-                                              <option value="Afterparty">Attend Afterparty only</option>
+                                              <option value="Wedding Reception">Attend Afterparty only</option>
                                               <option value="Unable All">Unable to attend</option>
                                             </select>
 
@@ -969,21 +977,19 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <img src="./assets/images/background-3.png" alt="background-3" class="img-fluid">
                                         </div>
                                         <br>
-                                        <form action="#" class="text-center" data-anim="fade-up">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                                <input type="text" class="form-control" placeholder="Name">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="fas fa-location-dot"></i></span>
-                                                <input type="text" class="form-control" placeholder="Address">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text textarea"><i class="fas fa-pen"></i></span>
-                                                <textarea name="" id="" rows="5" class="form-control" placeholder="Write your wishes"></textarea>
-                                            </div>
-                                            <button class="btn btn-custom m-auto w-100">Send</button>
+                                        <!-- REPLACE the old form with this -->
+                                        <form id="wishesForm" class="text-center" data-anim="fade-up">
+                                          <div class="input-group mb-3">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" id="wishName" class="form-control" placeholder="Name" required>
+                                          </div>
+                                          <div class="input-group mb-3">
+                                            <span class="input-group-text textarea"><i class="fas fa-pen"></i></span>
+                                            <textarea id="wishText" rows="5" class="form-control" placeholder="Write your wishes" required></textarea>
+                                          </div>
+                                          <button id="wishSend" type="submit" class="btn btn-custom m-auto w-100">Send</button>
                                         </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -996,81 +1002,76 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="col-md-8 col-lg-6">
                                 <div class="card">
                                     <div class="card-body text-left">
-                                        <div class="wishes" data-anim="slide-up">
+                                        <div class="wishes" data-anim="slide-up">                                            
                                             <div class="wish">
                                                 <div class="wish-badge">
                                                     <h6>D</h6>
                                                 </div>
                                                 <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ratione officiis ipsa reprehenderit non deserunt quis rem laborum sapiente quasi temporibus cum, in tempora omnis, obcaecati sint dicta hic iure.</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
-                                                </div>
-                                            </div>
-                                            <div class="wish ">
-                                                <div class="wish-badge">
-                                                    <h6>D</h6>
-                                                </div>
-                                                <div class="wish-description">
-                                                    <h6>Dewi</h6>
-                                                    <p>Happy Married Guys, hope you enjoy new journey and be happy
-                                                        family!</p>
-                                                    <small class="text-muted">3 Days ago</small>
+                                                    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ✅ your deployed Google Apps Script Web App URL
+  const WEBAPP_URL =
+    "https://script.google.com/macros/s/AKfycbwv-CAQqzHNimMaQcNgtHcJdUyI2elgT5xzCg3Hc18BneZRVj1Qhn_60SnhLZBmRg01IQ/exec";
+
+  const wishesContainer = document.querySelector(".wishes");
+
+  // Helper to escape text safely
+  const escapeHtml = (text) =>
+    String(text || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+  // Render a single wish card
+  const renderWish = (name, message) => {
+    const initial = escapeHtml(name.charAt(0).toUpperCase());
+    return `
+      <div class="wish">
+        <div class="wish-badge"><h6>${initial}</h6></div>
+        <div class="wish-description">
+          <h6>${escapeHtml(name)}</h6>
+          <p>${escapeHtml(message)}</p>
+        </div>
+      </div>
+    `;
+  };
+
+  // Fetch and display all wishes
+  async function loadWishes() {
+    try {
+      const res = await fetch(WEBAPP_URL + "?t=" + Date.now()); // avoid cache
+      if (!res.ok) throw new Error("Network error");
+      const data = await res.json();
+
+      // Reverse for newest first
+      const list = Array.isArray(data) ? data.reverse() : [];
+
+      // Clear current list
+      wishesContainer.innerHTML = "";
+
+      // Insert new wishes
+      list.forEach((item) => {
+        const name = item.name || "Anonymous";
+        const message = item.wish || "";
+        wishesContainer.insertAdjacentHTML("beforeend", renderWish(name, message));
+      });
+    } catch (err) {
+      console.error("❌ Failed to load wishes:", err);
+    }
+  }
+
+  // Load immediately on page open
+  loadWishes();
+
+  // Auto-refresh every 3 seconds
+  setInterval(loadWishes, 3000);
+});
+</script>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -1126,49 +1127,30 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <div class="splide__track overflow-visible">
                                         <ul class="splide__list" id="zoom-gallery-default">
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo01.jfif">
                                                     <img src="./assets/images/photo01.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo03.jfif">
                                                     <img src="./assets/images/photo03.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo04.jfif">
                                                     <img src="./assets/images/photo04.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
-                                            </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo05.jfif">
                                                     <img src="./assets/images/photo05.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo06.jfif">
                                                     <img src="./assets/images/photo06.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo07.jfif">
                                                     <img src="./assets/images/photo07.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo08.jfif">
                                                     <img src="./assets/images/photo08.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo09.jfif">
                                                     <img src="./assets/images/photo09.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                             <li class="splide__slide position-relative">
-                                                <a href="./assets/images/photo10.jfif">
                                                     <img src="./assets/images/photo10.jfif" alt="img-gallery" class="img-gallery" />
-                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -1181,103 +1163,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             <!-- Tanks Section -->
-            <section class="thank-section moveable-section" data-id="9">
-                <div class="ornaments-wrapper overflow-hidden">
-                    <div class="bg-1">
-                        <div class="image-element" data-anim="slide-up">
-                            <img src="./assets/images/bg-3.png" alt="bg-3" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="bg-3">
-                        <div class="image-element" data-anim="slide-left">
-                            <img src="./assets/images/bg-2-1.png" alt="bg-2-1" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="bg-2">
-                        <div class="image-element" data-anim="slide-left">
-                            <img src="./assets/images/bg-2.png" alt="bg-2" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="bg-4">
-                        <div class="image-element" data-anim="slide-up">
-                            <img src="./assets/images/bg-1.png" alt="bg-1" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="orn-1">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid animate-loop" data-anim="rotate-left">
-                        </div>
-                    </div>
-                    <div class="orn-2">
-                        <div class="image-element" data-anim="fade-left">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid animate-loop" data-anim="rotate-left">
-                        </div>
-                    </div>
-                    <div class="orn-3">
-                        <div class="image-element" data-anim="fade-left">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid animate-loop" data-anim="rotate-left">
-                        </div>
-                    </div>
-                    <div class="orn-4">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="orn-5">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/flower-1.png" alt="flower-1" class="img-fluid animate-loop" data-anim="rotate-right">
-                        </div>
-                    </div>
-                    <div class="orn-6">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/flower-2.png" alt="flower-2" class="img-fluid animate-loop" data-anim="rotate-left" data-anim-duration="4500ms">
-                        </div>
-                    </div>
-                    <div class="orn-7">
-                        <div class="image-element" data-anim="fade-left">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid animate-loop" data-anim="rotate-left">
-                        </div>
-                    </div>
-                    <div class="orn-8">
-                        <div class="image-element">
-                            <img src="./assets/images/tree.png" alt="tree" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="orn-9">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/flower-1.png" alt="flower-1" class="img-fluid animate-loop" data-anim="rotate-left">
-                        </div>
-                    </div>
-                    <div class="orn-10">
-                        <div class="image-element" data-anim="fade-right">
-                            <img src="./assets/images/flower-2.png" alt="flower-2" class="img-fluid animate-loop" data-anim="rotate-right">
-                        </div>
-                    </div>
-                </div>
-                <div class="thank-wrapper">
-                    <div class="container position-relative">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 col-lg-5 col-xl-4 position-relative">
-                                <div class="image-wrapper">
-                                    <div class="image-element">
-                                        <img src="./assets/images/background-4.webp" alt="thank-background" class="thank-background">
-                                    </div>
-                                </div>
-                                <div class="thank">
-                                    <div class="thank-body">
-                                        <div class="title-section" data-anim="fade-down">
-                                            <h2>Thank You</h2>
-                                        </div>
-                                        <div class="position-relative" data-anim="zoom-out">
-                                            <p>See you at the celebration!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+               <section class="thank-section" 
+                 style="
+                   position: relative;
+                    width: 100%;
+                  height: 350px;
+                 background: url('./assets/images/background-4.webp') center 20% / cover no-repeat;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: #fff;
+                    ">
+  
+                  <div style="
+                   position: absolute;
+                  inset: 0;
+                  background: rgba(0,0,0,0.35);
+                  "></div>
+
+                 <div style="position: relative; z-index: 1;">
+                   <h2 data-anim='fade-down' style='font-size: 2rem; margin-bottom: 8px;'>Thank You</h2>
+                    <p data-anim='zoom-out' style='font-size: 1rem;'>See you at the celebration!</p>
+                 </div>
+                </section>
+
         </div>
         <footer class="footer color-secondary">
             <small>Copyright 2025 Created with ❤️ by NGOnline.id</small>
@@ -1297,23 +1207,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="col-12 mt-3">
                         <div class="maps-element">
-                            <div class="loader-wrapper-modal">
-                                <div class="lds-default">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <iframe class="maps-embed" width="100%" height="328" id="gmap_canvas" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.737000816921!2d106.82206721083676!3d-6.165963893795528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d060a92d27%3A0x60706c3d12c147b!2sKapel%20Biara%20Ursulin%20Santa%20Maria!5e0!3m2!1sen!2sid!4v1759593469268!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                             <div class="map-embed">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.737000816921!2d106.82206721083676!3d-6.165963893795528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d060a92d27%3A0x60706c3d12c147b!2sKapel%20Biara%20Ursulin%20Santa%20Maria!5e0!3m2!1sen!2sid!4v1759593469268!5m2!1sen!2sid"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                          </iframe>
+                        </div>
                         </div>
                         <a href="https://maps.app.goo.gl/5QJyMUMjc4DY4bGg8" 
                            class="btn btn-custom mt-3" 
@@ -1338,23 +1239,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="col-12 mt-3">
                         <div class="maps-element">
-                            <div class="loader-wrapper-modal">
-                                <div class="lds-default">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <iframe class="maps-embed" width="100%" height="328" id="gmap_canvas" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.690654356224!2d106.83325287485427!3d-6.172157293815191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5cc097e35db%3A0x7302b729335a095b!2sHotel%20Borobudur%20Jakarta!5e0!3m2!1sid!2sid!4v1759593662317!5m2!1sid!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                             <div class="map-embed">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.690654356224!2d106.83325287485427!3d-6.172157293815191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5cc097e35db%3A0x7302b729335a095b!2sHotel%20Borobudur%20Jakarta!5e0!3m2!1sid!2sid!4v1759593662317!5m2!1sid!2sid"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                          </iframe>
+                        </div>
                         </div>
                         <a href="https://maps.app.goo.gl/ExXxXmCLjNSh8q6u6" 
                            class="btn btn-custom mt-3" 
@@ -1457,6 +1349,123 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- scripts custom -->
     <script src="./assets/js/countdown.js"></script>
     <script src="./assets/js/app.js?v="></script>
-</body>
 
-</html>
+
+
+    <script>
+        const wishesScriptURL = "https://script.google.com/macros/s/AKfycbwv-CAQqzHNimMaQcNgtHcJdUyI2elgT5xzCg3Hc18BneZRVj1Qhn_60SnhLZBmRg01IQ/exec";
+
+        document.getElementById("wishesForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const name = document.getElementById("wishName").value;
+          const wish = document.getElementById("wishText").value;
+          const sendBtn = form.querySelector("button[type='submit']");
+
+         sendBtn.disabled = true;
+        sendBtn.textContent = "Sending Wishes...";
+
+         const data = { name, wish };
+
+         fetch(wishesScriptURL, {
+         method: "POST",
+         body: JSON.stringify(data)
+         })
+         .then(res => res.json())
+         .then(() => {
+            form.reset();
+           loadWishes();
+        })
+         .finally(() => {
+          // Re-enable the button
+          sendBtn.disabled = false;
+          sendBtn.textContent = "Send";
+        });
+        });
+
+
+        function loadWishes() {
+          fetch(wishesScriptURL)
+            .then(res => res.json())
+            .then(wishes => {
+              const wrapper = document.getElementById("wishesWrapper");
+              wrapper.innerHTML = "";
+              wishes.reverse().forEach(w => {
+                const initial = w.name.trim().charAt(0).toUpperCase();
+                const div = document.createElement("div");
+                div.classList.add("wish");
+                div.innerHTML = `
+                  <div class="wish-badge">
+                    <h6>${initial}</h6>
+                  </div>
+                  <div class="wish-description">
+                    <h6>${w.name}</h6>
+                    <p>${w.wish}</p>
+                  </div>
+                `;
+                wrapper.appendChild(div);
+             });
+        })
+         .catch(err => {
+           console.error("Failed to load wishes:", err);
+         });
+        }
+
+        loadWishes();
+    </script>
+
+
+
+<script>
+document.addEventListener('click', function (e) {
+  const el = e.target.closest('.clickable-account');
+  if (!el) return;
+
+  const acct = el.dataset.acct;
+  if (!acct) return;
+
+  // store original text so we can revert
+  const originalText = el.textContent;
+
+  // Try Clipboard API
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(acct).then(() => {
+      showTemporaryFeedback(el, 'Account Number Copied', originalText);
+    }).catch(() => {
+      fallbackCopy(acct, el, originalText);
+    });
+  } else {
+    fallbackCopy(acct, el, originalText);
+  }
+});
+
+function fallbackCopy(text, el, originalText) {
+  const tmp = document.createElement('input');
+  tmp.style.position = 'absolute';
+  tmp.style.left = '-9999px';
+  tmp.value = text;
+  document.body.appendChild(tmp);
+  tmp.select();
+  try {
+    document.execCommand('copy');
+    showTemporaryFeedback(el, 'Account Number Copied', originalText);
+  } catch (err) {
+    // as last resort, select the text for the user
+    el.textContent = originalText;
+    el.focus();
+    alert('Copy failed — please select the account number and copy manually.');
+  }
+  document.body.removeChild(tmp);
+}
+
+function showTemporaryFeedback(el, msg, revertText) {
+  el.textContent = msg;
+  el.classList.add('copied'); // in case you want to style it
+  // short delay before reverting
+  setTimeout(() => {
+    el.textContent = revertText;
+    el.classList.remove('copied');
+  }, 1400);
+}
+</script>
