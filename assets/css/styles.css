@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Baskerville Italic";
   color: var(--color-dark);
   -webkit-hyphens: manual;
           hyphens: manual;
@@ -2194,24 +2194,21 @@ img[alt=tree] {
   position: relative;
   background-color: var(--color-main);
   color: var(--color-dark);
-  border-radius: var(--border-radius);
-  padding: 2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0; 
+  border-bottom-right-radius: 0;
+  padding: 1.5rem;
 }
-@media (max-width: 767px) {
-  .story-section .story-content {
-    padding: 1rem;
-  }
-}
+
 .story-section .story-description {
   position: relative;
   text-align: center;
-  padding: 3rem 2rem;
-  z-index: 5;
-}
-@media (max-width: 767px) {
-  .story-section .story-description {
-    padding: 2rem 1rem;
-  }
+  padding-top: 2rem;
+  padding-bottom: 0;
+  border-bottom-left-radius: 0; 
+  border-bottom-right-radius: 0;
+  margin-bottom: 0
 }
 .story-section .story-description p {
   margin-bottom: 0;
@@ -2243,26 +2240,35 @@ img[alt=tree] {
 .story-section h6 {
   margin-top: 0.5rem;
   font-weight: 600;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Baskerville Italic', sans-serif;
 }
 
 .story-text p {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
+
 .three-photo-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 0.5rem;
-  max-width: 120%;
-}
-.three-photo-row img {
-  width: 33.3333%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.three-photo-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 0; 
+  border-top-right-radius: 0;
+}
+
+.story-section .container {
+  padding-left: 1;
+  padding-right: 1;
 }
 
 .dresscode-photo {
@@ -2464,7 +2470,7 @@ img[alt=tree] {
   padding: 0;
 }
 .venue-section .venue-wrapper .venue-content .card .card-body h4 {
-  padding: 0.5rem 0;
+  padding: rem 0;
   position: relative;
 }
 .venue-section .venue-wrapper .venue-content .card .card-body .event-description {
@@ -2481,9 +2487,9 @@ img[alt=tree] {
 .venue-section .venue-wrapper .venue-content .card .card-body .event-name-body {
   position: relative;
   width: 100%;
-  padding: 5rem 1rem 8rem;
+  padding: 2rem 3rem 6rem;
   border-radius: var(--border-radius);
-  margin-top: -1rem;
+  margin-top: -2rem;
 }
 .venue-section .venue-wrapper .venue-content .card .card-body .event-name .date {
   position: relative;
@@ -2791,7 +2797,7 @@ img[alt=tree] {
 }
 @media (max-width: 767px) {
   .wishes-section .wishes-preview {
-    padding: 0 0 3rem;
+    padding: 0 0 1rem;
   }
 }
 .wishes-section .wishes-preview .card {
@@ -2866,13 +2872,13 @@ img[alt=tree] {
 .egift-section {
   position: relative;
   text-align: center;
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: var(--color-main);
+  color: var(--color-dark);
   padding: 5rem 0;
 }
 @media (max-width: 767px) {
   .egift-section {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
   }
 }
 .egift-section .orn-1 {
@@ -2908,6 +2914,22 @@ img[alt=tree] {
   .egift-section .orn-2 {
     width: 180px;
   }
+}
+.egift-section .image-wrapper .image-element {
+  height: 100%;
+}
+.egift-section .image-wrapper .image-element img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.egift-section .bg-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  opacity: 0.5;
 }
 .egift-section .gift-wrap {
   position: relative;
