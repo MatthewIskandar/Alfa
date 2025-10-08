@@ -1,16 +1,16 @@
 @font-face {
   font-family: "FogtwoNo5";
-  src: url(../fonts/FogtwoNo5.ttf) format("ttf");
+  src: url(../fonts/PlayfairDisplay-Italic.ttf) format("ttf");
   font-display: swap;
 }
 @font-face {
   font-family: "FogtwoNo5";
-  src: url(../fonts/FogtwoNo5.woff) format("woff");
+  src: url(../fonts/PlayfairDisplay-Italic.woff) format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "FogtwoNo5";
-  src: url(../fonts/FogtwoNo5.woff2) format("woff2");
+  src: url(../fonts/PlayfairDisplay-Italic.woff2) format("woff2");
   font-display: swap;
 }
 :root {
@@ -119,6 +119,16 @@ h3 {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1;
 }
+
+h7 {
+  display: block; /* so it behaves like a heading */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-size: 30px; /* adjust this value to any size you want */
+  font-weight: normal;
+  line-height: 1.0; /* optional for spacing */
+}
+
 
 h1 {
   font-size: 48px;
@@ -2467,10 +2477,10 @@ img[alt=tree] {
 }
 .venue-section .venue-wrapper .venue-content .card .card-body {
   position: relative;
-  padding: 0;
+  padding: 0rem;
 }
 .venue-section .venue-wrapper .venue-content .card .card-body h4 {
-  padding: rem 0;
+  padding: 1rem 0;
   position: relative;
 }
 .venue-section .venue-wrapper .venue-content .card .card-body .event-description {
@@ -2487,7 +2497,7 @@ img[alt=tree] {
 .venue-section .venue-wrapper .venue-content .card .card-body .event-name-body {
   position: relative;
   width: 100%;
-  padding: 2rem 3rem 6rem;
+  padding: 3rem 3rem 6rem;
   border-radius: var(--border-radius);
   margin-top: -2rem;
 }
@@ -3734,4 +3744,5 @@ img[alt=tree] {
     height: 400px;
   }
 }
+
 
